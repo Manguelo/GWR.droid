@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "GodsWayRadio\Core.csproj", "{FE2B8481-B135-41A6-BB34-6F5E9589B09C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodsWayRadio.Droid", "GodsWayRadio.Droid\GodsWayRadio.Droid.csproj", "{FB8EC6AA-A77B-453C-A279-9B5BFEC6FCB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE2B8481-B135-41A6-BB34-6F5E9589B09C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2B8481-B135-41A6-BB34-6F5E9589B09C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2B8481-B135-41A6-BB34-6F5E9589B09C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2B8481-B135-41A6-BB34-6F5E9589B09C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB8EC6AA-A77B-453C-A279-9B5BFEC6FCB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB8EC6AA-A77B-453C-A279-9B5BFEC6FCB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB8EC6AA-A77B-453C-A279-9B5BFEC6FCB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB8EC6AA-A77B-453C-A279-9B5BFEC6FCB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

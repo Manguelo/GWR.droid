@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgc">
+    
+    <!--<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bgc"/>-->
+    
+    <TextView 
+        android:id="@+id/temp_toolbar"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:text="God's Way Radio"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+        local:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/white"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        local:layout_constraintTop_toTopOf="parent"
+        local:layout_constraintBottom_toBottomOf="parent">
+        
+       <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/radio_logo2"/>
+        
+        <Button
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_gravity="center"
+            android:text="listen live"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:background="@drawable/roundedcorners"
+            local:MvxBind="Click NavigateCommand"/>
+        
+    </LinearLayout>
+    
+    <TextView 
+        android:id="@+id/bottom_view"
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:text="God's Way Radio - Now Playing..."
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:gravity="center"
+        local:layout_constraintBottom_toBottomOf="parent"
+        local:MvxBind="Text Status"
+        android:background="@android:color/white"/>
+
+</android.support.constraint.ConstraintLayout>

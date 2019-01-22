@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgc">
+    
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        local:layout_constraintTop_toTopOf="parent"
+        local:layout_constraintStart_toStartOf="parent"
+        local:layout_constraintEnd_toEndOf="parent" />
+    
+    <LinearLayout
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:layout_marginTop="35dp"
+        android:gravity="top"
+        local:layout_constraintTop_toBottomOf="@+id/toolbar">
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/radio_logo2"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/play"
+                android:clickable="true"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="25dp"
+                android:layout_gravity="bottom"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:background="@drawable/btn_play"/>
+            <Button
+                android:id="@+id/pause"
+                android:clickable="true"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:background="@drawable/btn_pause"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <SeekBar
+        android:id="@+id/volume_bar"
+        android:progressTint="@android:color/holo_red_light"
+        android:thumbTint="@android:color/holo_red_light"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:layout_constraintTop_toBottomOf="@+id/player"
+        local:layout_constraintBottom_toTopOf="@+id/now_playing"/>
+    
+    <LinearLayout
+        android:id="@+id/now_playing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="45dp"
+        local:layout_constraintTop_toBottomOf="@+id/volume_bar">
+        
+        <TextView 
+            android:id="@+id/label1"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:text="God's Way Radio"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:gravity="center"/>
+        
+         <TextView 
+            android:id="@+id/label2"
+            android:layout_height="30dp"
+            android:layout_width="match_parent"
+            android:text="104.7 WAYG"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:gravity="center" />
+     </LinearLayout>
+
+     <android.webkit.WebView
+                android:id="@+id/web_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                local:layout_constraintTop_toBottomOf="@+id/pause"
+                local:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>
