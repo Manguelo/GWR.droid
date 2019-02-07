@@ -58,7 +58,6 @@ namespace GodsWayRadio.Droid.Views
             subLabel = FindViewById<TextView>(Resource.Id.label2);
             volume = FindViewById<SeekBar>(Resource.Id.volume_bar);
             webView = FindViewById<WebView>(Resource.Id.web_view);
-            SetUpUI();
 
             if (_service == null)
             {
@@ -83,6 +82,12 @@ namespace GodsWayRadio.Droid.Views
 
                 BindService(intent, connection, Bind.AutoCreate);
             }
+        }
+
+        protected override void OnPostCreate(Bundle savedInstanceState)
+        {
+            base.OnPostCreate(savedInstanceState);
+            SetUpUI();
         }
 
         void OnPlayButtonClick()

@@ -7,6 +7,8 @@ using MvvmCross.Core.ViewModels;
 using System.Threading.Tasks;
 using MvvmCross.Platform;
 using System.Linq;
+using GodsWayRadio.Models;
+using MvvmCross.Platform.UI;
 
 namespace GodsWayRadio.ViewModels
 {
@@ -15,17 +17,15 @@ namespace GodsWayRadio.ViewModels
         public MenuViewModel(IMvxNavigationService navigationService,
                               IMvxTrace trace) : base(navigationService, trace)
         {
-    //        MenuItems = new List<MenuItem>
-    //        {
-    //            new MenuItem { Title = "Home", ImageName = "menu_home" },
-    //            new MenuItem { Title = "Upload Document", ImageName = "menu_scanner" },
-    //            new MenuItem { Title = "Shoebox", ImageName = "menu_document" },
-    //            new MenuItem { Title = "Notes", ImageName = "menu_chat" },
-				////new MenuItem { Title = "Alerts", ImageName = "menu-alert" },
-				//new MenuItem { Title = "Settings", ImageName = "menu_settings" },
-            //    new MenuItem { Title = "About", ImageName = "person" },
-            //    new MenuItem { Title = "Help", ImageName = "menu_help" }
-            //};
+            MenuItems = new List<MenuItem>
+            {
+                new MenuItem { Title = "Instgram", ImageName = "menu_home", Color = MvxColor.ParseHexString("#517FA3")},
+                new MenuItem { Title = "Twitter", ImageName = "menu_scanner", Color = MvxColor.ParseHexString("#55ACEF")},
+                new MenuItem { Title = "Facebook", ImageName = "menu_document", Color = MvxColor.ParseHexString("#385B9B")},
+                new MenuItem { Title = "YouTube", ImageName = "menu_chat", Color = MvxColor.ParseHexString("#E32D2A") },
+				//new MenuItem { Title = "Alerts", ImageName = "menu-alert" },
+				new MenuItem { Title = "Contact", ImageName = "menu_settings", Color = MvxColor.ParseHexString("#0d3982") },
+            };
 
             //_dialogProvider = dialogProvider;
             //_fileHelper = fileHelper;
@@ -39,12 +39,12 @@ namespace GodsWayRadio.ViewModels
 
         // Properties
 
-        //IList<MenuItem> _menuItems;
-        //public IList<MenuItem> MenuItems
-        //{
-        //    get => _menuItems;
-        //    set => SetProperty(ref _menuItems, value);
-        //}
+        IList<MenuItem> _menuItems;
+        public IList<MenuItem> MenuItems
+        {
+            get => _menuItems;
+            set => SetProperty(ref _menuItems, value);
+        }
 
         //MenuItem _selectedItem;
         //public MenuItem SelectedItem
@@ -60,7 +60,6 @@ namespace GodsWayRadio.ViewModels
         //            await Navigate(value.Title);
         //            SelectedItem = null;
         //        });
-
         //    }
         //}
 
