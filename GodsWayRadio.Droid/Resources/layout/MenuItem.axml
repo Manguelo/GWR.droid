@@ -1,18 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android" 
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" 
-    android:gravity="center"
-    android:layout_width="match_parent" 
-    android:layout_height="60dp">
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:clickable="true"                                         
+    local:MvxBind="BackgroundColor NativeColor(Color)">
+    
+    <MvvmCross.Binding.Droid.Views.MvxImageView
+      android:id="@+id/user_image"
+      android:layout_width="35dp"
+      android:layout_height="35dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      local:layout_constraintTop_toTopOf="parent"
+      local:layout_constraintBottom_toBottomOf="@+id/item_text"
+      local:layout_constraintLeft_toLeftOf="parent"
+      local:MvxBind="DrawableName ImageName"/>
     
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
+        android:id="@+id/item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:foregroundGravity="center"
         android:textSize="17sp"
         android:textColor="@android:color/white"
-        local:MvxBind="Text Title; BackgroundColor NativeColor(Color)"/>
+        android:gravity="center"
+        local:layout_constraintLeft_toLeftOf="parent"
+        local:layout_constraintRight_toRightOf="parent"
+        local:MvxBind="Text Title" />
     
-</LinearLayout>
+    
+</android.support.constraint.ConstraintLayout>

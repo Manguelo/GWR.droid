@@ -5,7 +5,7 @@ using MvvmCross.Droid.Views;
 namespace GodsWayRadio.Droid
 {
     [Activity(
-        Label = "GodsWayRadio.Droid"
+        Label = "GodsWayRadio"
         , MainLauncher = true
         , Icon = "@mipmap/icon"
         , Theme = "@style/Theme.Splash"

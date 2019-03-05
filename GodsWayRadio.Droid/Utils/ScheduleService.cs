@@ -25,7 +25,7 @@ namespace GodsWayRadio.Droid.Utils
 
         public List<string> GetSchedule()
         {
-            _webView.EvaluateJavascript("javascript: getSchedule();", this);
+            _webView?.EvaluateJavascript("javascript: getSchedule();", this);
             if (_nowPlaying != null)
                 return _nowPlaying.Trim('"').Split("-").ToList();
             else

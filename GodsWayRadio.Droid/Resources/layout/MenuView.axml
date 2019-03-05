@@ -12,11 +12,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
-    
-        <!--<include layout="@menu/nav_header"/>-->
-        
+            
         <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
             android:id="@+id/navigation_recycler_view"
             android:layout_width="match_parent"
@@ -24,35 +22,18 @@
             android:clickable="true"
             app:MvxItemTemplate="@layout/menuitem"
             app:MvxBind="ItemsSource MenuItems; ItemClick SelectItemCommand"/>
-       
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/material_grey_600"
+            android:text="'As for God, His way is perfect the word of the LORD is proven; He is a shield to all those who trust in Him.' - Psalm 18:30"/>
+
     </LinearLayout>
-    
-   <!-- <LinearLayout
-        style="@android:style/Widget.ActionButton"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_margin="20dp"
-        android:orientation="horizontal"
-        android:background="@drawable/orange_border"
-        android:clickable="true"
-        android:layout_gravity="bottom"
-        app:MvxBind="Click LogoutCommand">
-            
-            <ImageView
-                android:src="@drawable/lock"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:paddingRight="10dp"/>
-            
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Logout"
-                android:textAllCaps="true"
-                android:textSize="13sp"
-                style="@style/MainTextBold"
-                android:textColor="@color/prep_gray" />
-                
-    </LinearLayout>-->
     
 </android.support.design.widget.NavigationView>

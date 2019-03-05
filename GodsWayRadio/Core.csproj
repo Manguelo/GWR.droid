@@ -38,6 +38,8 @@
     <Compile Include="ViewModels\SplitRootViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
     <Compile Include="Models\MenuItem.cs" />
+    <Compile Include="ViewModels\WebsiteViewModel.cs" />
+    <Compile Include="Models\WebViewSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MvvmCross.Platform">
