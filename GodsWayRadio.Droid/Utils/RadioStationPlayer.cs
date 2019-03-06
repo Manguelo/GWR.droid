@@ -36,6 +36,14 @@ namespace wzxv
             _handler = new Handler();
         }
 
+        public RadioStationPlayer(IntPtr javaReference, JniHandleOwnership transfer)
+            : base()
+        {
+            _context = Android.App.Application.Context;
+            _audioManager = (AudioManager)Android.App.Application.Context.GetSystemService(Context.AudioService);
+            _handler = new Handler();
+        }
+
         public event EventHandler StateChanged;
         public event EventHandler<RadioStationErrorEventArgs> Error;
 
@@ -143,7 +151,7 @@ namespace wzxv
         private int? _previousAudioVolume = null;
         void AudioManager.IOnAudioFocusChangeListener.OnAudioFocusChange(AudioFocus focusChange)
         {
-            var maxVolume = _audioManager.GetStreamMaxVolume(Stream.Music);
+            var maxVolume = _audioManager?.GetStreamMaxVolume(Stream.Music);
 
             switch (focusChange)
             {
@@ -164,7 +172,7 @@ namespace wzxv
 
                 case AudioFocus.LossTransientCanDuck:
                     _previousAudioVolume = _audioManager.GetStreamVolume(Stream.Music);
-                    _audioManager.SetStreamVolume(Stream.Music, (int)Math.Round(maxVolume * 0.1), VolumeNotificationFlags.RemoveSoundAndVibrate);
+                    _audioManager?.SetStreamVolume(Stream.Music, (int)Math.Round((double)(maxVolume * 0.1)), VolumeNotificationFlags.RemoveSoundAndVibrate);
                     break;
             }
         }
