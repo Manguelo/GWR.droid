@@ -22,7 +22,7 @@ namespace GodsWayRadio.ViewModels
                 new MenuItem { Title = "Instgram", ImageName = "instagram", Color = MvxColor.ParseHexString("#517FA3")},
                 new MenuItem { Title = "Twitter", ImageName = "twitter", Color = MvxColor.ParseHexString("#55ACEF")},
                 new MenuItem { Title = "Facebook", ImageName = "facebook", Color = MvxColor.ParseHexString("#385B9B")},
-                new MenuItem { Title = "YouTube", ImageName = "youtube", Color = MvxColor.ParseHexString("#E32D2A") },
+                //new MenuItem { Title = "YouTube", ImageName = "youtube", Color = MvxColor.ParseHexString("#E32D2A") },
 				//new MenuItem { Title = "Alerts", ImageName = "menu-alert" },
 				new MenuItem { Title = "Contact", ImageName = "phone", Color = MvxColor.ParseHexString("#0d3982") },
             };

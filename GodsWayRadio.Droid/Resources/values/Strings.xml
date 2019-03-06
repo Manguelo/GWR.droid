@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">Hello World, Click Me!</string>
-    <string name="app_name">GodsWayRadio</string>
+    <string name="app_name">Gods Way Radio</string>
     <string name="OpenDrawer">open</string>
     <string name="CloseDrawer">close</string>
 </resources>

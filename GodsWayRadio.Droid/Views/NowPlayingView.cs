@@ -103,11 +103,16 @@ namespace GodsWayRadio.Droid.Views
                 else
                 {
                     StartService(intent);
+                    _service.UpdateNotification("Now Playing - God's Way Radio", "WAYG - 104.7");
                 }
-
-                _service.UpdateNotification("Now Playing - God's Way Radio", "WAYG - 104.7");
+            }
+            else if (_service.IsPlaying)
+            {
+                play.Alpha = 0.5f;
+                pause.Alpha = 1f;
             }
         }
+
 
         protected override void OnDestroy()
         {
