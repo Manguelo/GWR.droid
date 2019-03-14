@@ -41,7 +41,7 @@ namespace wzxv
                 _manager.CreateNotificationChannel(channel);
             }
         }
-
+        
         public NotificationCompat.Builder CreateNotificationBuilder(string Title = "God's Way Radio", string SubTitle = "WAYG - 104.7")
         {
             var pendingIntent = PendingIntent.GetActivity(_context, 0, new Intent(_context, typeof(MainView)), PendingIntentFlags.UpdateCurrent);

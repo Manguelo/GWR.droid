@@ -19,7 +19,7 @@ namespace GodsWayRadio.ViewModels
         {
             MenuItems = new List<MenuItem>
             {
-                new MenuItem { Title = "Instgram", ImageName = "instagram", Color = MvxColor.ParseHexString("#517FA3")},
+                new MenuItem { Title = "Instagram", ImageName = "instagram", Color = MvxColor.ParseHexString("#517FA3")},
                 new MenuItem { Title = "Twitter", ImageName = "twitter", Color = MvxColor.ParseHexString("#55ACEF")},
                 new MenuItem { Title = "Facebook", ImageName = "facebook", Color = MvxColor.ParseHexString("#385B9B")},
                 //new MenuItem { Title = "YouTube", ImageName = "youtube", Color = MvxColor.ParseHexString("#E32D2A") },

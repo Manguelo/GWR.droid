@@ -104,6 +104,14 @@ namespace wzxv
             }
         }
 
+        public override void OnTaskRemoved(Intent rootIntent)
+        {
+            base.OnTaskRemoved(rootIntent);
+            Stop();
+            NotificationManager mNotificationManager = (NotificationManager)Application.Context.GetSystemService(Context.NotificationService);
+            mNotificationManager.CancelAll();
+        }
+
         public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)
         {
             if (Build.VERSION.SdkInt >= BuildVersionCodes.O)

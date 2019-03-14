@@ -17,6 +17,7 @@ using Android.Content.PM;
 using System.Collections.Generic;
 using MvvmCross.Platform;
 using GodsWayRadio.Interfaces;
+using System.Threading.Tasks;
 
 namespace GodsWayRadio.Droid.Views
 {
@@ -35,6 +36,7 @@ namespace GodsWayRadio.Droid.Views
         private RadioStationService _service;
         private AudioManager _manager;
         private bool _continueTimer = true;
+        private bool wait = false;
 
         Button play;
         Button pause;
@@ -83,11 +85,15 @@ namespace GodsWayRadio.Droid.Views
 
                 BindService(intent, connection, Bind.AutoCreate);
             }
-        }
 
-        protected override void OnPostCreate(Bundle savedInstanceState)
-        {
-            base.OnPostCreate(savedInstanceState);
+            Action p = () =>
+               {
+                   while (_service == null)
+                       Console.Out.WriteLine("waiting for service...");
+               };
+            Task.Run(p).ContinueWith((arg) => OnPlayButtonClick());
+
+
         }
 
         void OnPlayButtonClick()

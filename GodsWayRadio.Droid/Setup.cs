@@ -7,6 +7,7 @@ using GodsWayRadio.Interfaces;
 using GodsWayRadio.Droid.Utils;
 using MvvmCross.Droid.Views;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using Android.App;
 
 namespace GodsWayRadio.Droid
 {
@@ -15,7 +16,7 @@ namespace GodsWayRadio.Droid
         public Setup(Context applicationContext) : base(applicationContext)
         {
         }
-
+        
         protected override IMvxApplication CreateApp()
         {
             return new GodsWayRadio.App();
@@ -34,7 +35,7 @@ namespace GodsWayRadio.Droid
         {
             return new DebugTrace();
         }
-
+        
         protected override IMvxAndroidViewPresenter CreateViewPresenter() => new MvxAppCompatViewPresenter(AndroidViewAssemblies);
     }
 }
