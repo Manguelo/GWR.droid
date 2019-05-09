@@ -14,6 +14,9 @@ using Android.Support.V4.App;
 using Android.Support.V4.Media.Session;
 using Android.Util;
 using Com.Google.Android.Exoplayer2;
+using GodsWayRadio.Droid.Views;
+using GodsWayRadio.Interfaces;
+using MvvmCross.Platform;
 //using Com.Google.Android.Exoplayer2.Metadata;
 //using Com.Google.Android.Exoplayer2.Source;
 //using Com.Google.Android.Exoplayer2.Trackselection;
@@ -107,6 +110,7 @@ namespace wzxv
         public override void OnTaskRemoved(Intent rootIntent)
         {
             base.OnTaskRemoved(rootIntent);
+            NowPlayingView._continueTimer = false;
             Stop();
             NotificationManager mNotificationManager = (NotificationManager)Application.Context.GetSystemService(Context.NotificationService);
             mNotificationManager.CancelAll();

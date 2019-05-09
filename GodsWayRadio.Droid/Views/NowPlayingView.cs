@@ -27,16 +27,12 @@ namespace GodsWayRadio.Droid.Views
              ScreenOrientation = ScreenOrientation.Portrait)]
     public class NowPlayingView : BaseViewBackButton<NowPlayingViewModel>
     {
-        WebView HTML_Player;
-
         public const string TAG = "wzxv.app.main";
         public const string ActivityName = "wzxv.app.main";
 
-        private NetworkStats _networkStatus;
         private RadioStationService _service;
         private AudioManager _manager;
-        private bool _continueTimer = true;
-        private bool wait = false;
+        public static bool _continueTimer = true;
 
         Button play;
         Button pause;
@@ -51,6 +47,7 @@ namespace GodsWayRadio.Droid.Views
         {
             base.OnCreate(bundle);
 
+            _continueTimer = true;
             SetContentView(Resource.Layout.NowPlayingView);
             SetupToolbar("Now Playing");
 
